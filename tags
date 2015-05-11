@@ -1,0 +1,16 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+OnExit	src/rabin_karp_v1.cpp	/^void OnExit (void) $/;"	f
+OnExit	src/rabin_karp_v2.cpp	/^void OnExit (void) $/;"	f
+insert_byte	src/rabin_karp_v1.cpp	/^int insert_byte(uint64_t& current_digest, BYTE to_digest)$/;"	f
+insert_byte	src/rabin_karp_v2.cpp	/^int insert_byte(uint64_t& current_digest, BYTE to_digest)$/;"	f
+insert_bytes	src/rabin_karp_v1.cpp	/^int insert_bytes(uint64_t& current_digest, BYTE* data, size_t size)$/;"	f
+insert_bytes	src/rabin_karp_v2.cpp	/^int insert_bytes(uint64_t& current_digest, BYTE* data, size_t size)$/;"	f
+main	src/rabin_karp_v1.cpp	/^int main (int argc, char ** argv)$/;"	f
+main	src/rabin_karp_v2.cpp	/^int main (int argc, char ** argv)$/;"	f
+remove_byte	src/rabin_karp_v1.cpp	/^int remove_byte(uint64_t& current_digest, BYTE from_digest)$/;"	f
+remove_byte	src/rabin_karp_v2.cpp	/^int remove_byte(uint64_t& current_digest, BYTE from_digest)$/;"	f
