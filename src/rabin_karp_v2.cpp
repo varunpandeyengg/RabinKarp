@@ -49,7 +49,7 @@ void OnExit (void)
  * the byte.
  * returns 0 on success
  * */
-int remove_byte(uint64_t& current_digest, BYTE from_digest)
+int remove_byte(int64_t& current_digest, BYTE from_digest)
 {
 	int ret_val = 0;
 
@@ -67,7 +67,7 @@ int remove_byte(uint64_t& current_digest, BYTE from_digest)
  * returns 0 on success
  *
  * */
-int insert_byte(uint64_t& current_digest, BYTE to_digest)
+int insert_byte(int64_t& current_digest, BYTE to_digest)
 {
 	int ret_val = 0;
 
@@ -81,7 +81,7 @@ int insert_byte(uint64_t& current_digest, BYTE to_digest)
 /* Process $size bytes and add it into the into the digest
  * returns 0 on success
  * */
-int insert_bytes(uint64_t& current_digest, BYTE* data, size_t size)
+int insert_bytes(int64_t& current_digest, BYTE* data, size_t size)
 {
 	int ret_val = 0;
 	for (auto i = (size_t)0; i < size; i++){
@@ -95,8 +95,8 @@ int main (int argc, char ** argv)
 {
 	auto found = false;
 	auto i = (size_t)0;
-	uint64_t text_digest = 0;
-	uint64_t pattern_hash = 0;
+	int64_t text_digest = 0;
+	int64_t pattern_hash = 0;
 	size_t msb_pos_window = 0;
 		
 	BYTE* read_buf = NULL;
