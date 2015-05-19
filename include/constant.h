@@ -41,7 +41,7 @@
 
 #define BUF_SIZE 10
 #define BYTE char
-#define RADIX 3//128//256
+#define RADIX 128//3//128//256
 #define PRIME 3355439 //Prime Number
 
 #define THROW(err) {                                                                            \

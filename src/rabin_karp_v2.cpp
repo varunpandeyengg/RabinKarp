@@ -54,6 +54,8 @@ int remove_byte(int64_t& current_digest, BYTE from_digest)
 	int ret_val = 0;
 
 	current_digest = current_digest - (msb_multiplier * from_digest); //shift the byte
+	while (current_digest < 0)
+		current_digest += PRIME;
 	//current_digest %= PRIME;
 	return ret_val;
 }
