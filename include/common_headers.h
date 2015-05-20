@@ -55,5 +55,8 @@
 /*For Current Pos*/
 //#include <ios>
 //
-
+/*CUDA headers
+#include <cuda.h>
+#include <cuda_runtime.h>
+*/
 #endif //COMMON_INCLUDES

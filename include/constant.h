@@ -50,9 +50,23 @@
                         throw std::runtime_error(err_msg.str());                                \
                 }
 
-#define ZERO(s, size) memset(s, 0, size)
+#define ZERO(s, size) memset(s, 0, size);
+#define PATTERN_REPORT(found, pos){ \
+					if (found)\
+						std::cout << std::endl << "Pattern found!!! at position " << pos << std::endl; \
+					else \
+						std::cout << std::endl << "Pattern not found..." << std::endl;\
+				}
 
-size_t window_size = 5; //By default
+#define REPORT(e) std::cout << std::endl << "Error reported: " << e.what() << std::endl;
+#define USAGE_EXIT(process) {\
+                                        printf ("\t Illegal Usage. Expected two arg - text path and pattern. Correct usage for the this utility is:\n"); \
+                                        printf ("\t %s  <file_path aka text> <pattern text>\n", process); \
+                                        printf ("\t \t \t @Rabin Karp utility...\n"); \
+                                        exit(-1); \
+}
+
+size_t window_size = 5; //By default, will change with 
 uint64_t msb_multiplier = 1;
 
 #endif //CONSTANT

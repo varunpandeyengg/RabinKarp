@@ -1,5 +1,5 @@
 /*
- * rabin_karp.cpp
+ * rabin_karp_v2.cpp
  * 
  * Created by Varun Pandey on 05-07-2015.
  * 
@@ -54,9 +54,10 @@ int remove_byte(int64_t& current_digest, BYTE from_digest)
 	int ret_val = 0;
 
 	current_digest = current_digest - (msb_multiplier * from_digest); //shift the byte
+	/*After much head banging, I am adding this code. Underflowing hash, damn it!*/
 	while (current_digest < 0)
 		current_digest += PRIME;
-	//current_digest %= PRIME;
+	
 	return ret_val;
 }
 
@@ -107,10 +108,8 @@ int main (int argc, char ** argv)
 	std::ifstream file_stream;
 	std::streampos stream_pos;
 	
-	if (argc != 3) {
-		std::cout << std::endl << "Illegal number of arguments.";
-		return -1;
-	}
+	if (argc != 3)
+		USAGE_EXIT(argv[0]);
 	
 	atexit (OnExit);	
 
@@ -174,20 +173,18 @@ int main (int argc, char ** argv)
 		}
 		
 	} catch (const std::exception& e) {
-		std::cout << std::endl << "Error reported: " <<e.what() << std::endl;
+		REPORT(e);
 	}
 
 	/*Display Result*/
-	if (found) 
-		std::cout << std::endl << "Pattern found!!!" << std::endl;
-	else
-		std::cout << std::endl << "Pattern not found..." << std::endl;
+	PATTERN_REPORT(found, file_stream.tellg());
 	
 	/*Cleanup*/
 	if (read_buf)	
 		delete [] read_buf, read_buf = NULL;
 	if (window)
 		delete [] window, window = NULL;
+
 	file_stream.close();
 	
 	return 0;

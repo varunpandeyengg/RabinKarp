@@ -1,5 +1,5 @@
 /*
- * rabin_karp.cpp
+ * rabin_karp_v1.cpp
  * 
  * Created by Varun Pandey on 05-07-2015.
  * 

@@ -4,13 +4,36 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+BUF_SIZE	include/constant.h	42;"	d
+BYTE	include/constant.h	43;"	d
+CC	Makefile	/^CC=g++$/;"	m
+CC_FLAGS	Makefile	/^CC_FLAGS=-std=c++0x -Wall$/;"	m
+COMMON_INCLUDES	include/common_headers.h	39;"	d
+CONSTANT	include/constant.h	40;"	d
+CUDA_CC	Makefile	/^CUDA_CC=nvcc$/;"	m
+CUDA_CC_FLAGS	Makefile	/^CUDA_CC_FLAGS=-O3 -arch sm_20$/;"	m
 OnExit	src/rabin_karp_v1.cpp	/^void OnExit (void) $/;"	f
 OnExit	src/rabin_karp_v2.cpp	/^void OnExit (void) $/;"	f
+OnExit	src/rabin_karp_v3.cpp	/^void OnExit (void) $/;"	f
+PATTERN_REPORT	include/constant.h	54;"	d
+PRIME	include/constant.h	45;"	d
+RADIX	include/constant.h	44;"	d
+REPORT	include/constant.h	61;"	d
+THROW	include/constant.h	47;"	d
+USAGE_EXIT	include/constant.h	62;"	d
+ZERO	include/constant.h	53;"	d
+find_pattern	src/rabin_karp_v3.cpp	/^void find_pattern (BYTE* data, int64_t pattern_fingerprint, size_t text_size, size_t window_size, bool& found)$/;"	f
 insert_byte	src/rabin_karp_v1.cpp	/^int insert_byte(uint64_t& current_digest, BYTE to_digest)$/;"	f
-insert_byte	src/rabin_karp_v2.cpp	/^int insert_byte(uint64_t& current_digest, BYTE to_digest)$/;"	f
+insert_byte	src/rabin_karp_v2.cpp	/^int insert_byte(int64_t& current_digest, BYTE to_digest)$/;"	f
+insert_byte	src/rabin_karp_v3.cpp	/^int insert_byte(int64_t& current_digest, BYTE to_digest)$/;"	f
 insert_bytes	src/rabin_karp_v1.cpp	/^int insert_bytes(uint64_t& current_digest, BYTE* data, size_t size)$/;"	f
-insert_bytes	src/rabin_karp_v2.cpp	/^int insert_bytes(uint64_t& current_digest, BYTE* data, size_t size)$/;"	f
+insert_bytes	src/rabin_karp_v2.cpp	/^int insert_bytes(int64_t& current_digest, BYTE* data, size_t size)$/;"	f
+insert_bytes	src/rabin_karp_v3.cpp	/^int insert_bytes(int64_t& current_digest, BYTE* data, size_t size)$/;"	f
 main	src/rabin_karp_v1.cpp	/^int main (int argc, char ** argv)$/;"	f
 main	src/rabin_karp_v2.cpp	/^int main (int argc, char ** argv)$/;"	f
+main	src/rabin_karp_v3.cpp	/^int main (int argc, char ** argv)$/;"	f
+msb_multiplier	include/constant.h	/^uint64_t msb_multiplier = 1;$/;"	v
 remove_byte	src/rabin_karp_v1.cpp	/^int remove_byte(uint64_t& current_digest, BYTE from_digest)$/;"	f
-remove_byte	src/rabin_karp_v2.cpp	/^int remove_byte(uint64_t& current_digest, BYTE from_digest)$/;"	f
+remove_byte	src/rabin_karp_v2.cpp	/^int remove_byte(int64_t& current_digest, BYTE from_digest)$/;"	f
+remove_byte	src/rabin_karp_v3.cpp	/^int remove_byte(int64_t& current_digest, BYTE from_digest)$/;"	f
+window_size	include/constant.h	/^size_t window_size = 5; \/\/By default, will change with $/;"	v
