@@ -38,8 +38,9 @@
 #include "../include/common_headers.h"
 #include "../include/constant.h"
 
-/* Cleanup rutine before successfull termination of this program
- * */
+/***
+ * Cleanup rutine before successfull termination of this program
+ */
 void OnExit (void) 
 {
 	std::cout << std::endl << "Terminating Now..." << std::endl;
